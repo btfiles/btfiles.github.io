@@ -74,12 +74,14 @@
 				}
 			}
 		}
-
-    if (gl && !badImpl) {
-		console.log("Passed GL2.0 check.");
-    } else {
-		window.alert("This browser does not appear to support WebGL2. Please enable WebGL2 on your browser, update your browser to the latest version, and/or try a different browser.");
-    }
+		var may_continue;
+		if (gl && !badImpl) {
+			console.log("Passed GL2.0 check.");
+			may_continue = true;
+		} else {
+			window.alert("This browser does not appear to support WebGL2. Please enable WebGL2 on your browser, update your browser to the latest version, and/or try a different browser.");
+			may_continue = false;
+		}
 	</script>
     <script>
       var buildUrl = "Build";
@@ -126,7 +128,12 @@
           alert(message);
         });
       };
-      document.body.appendChild(script);
+	  if (may_continue) {
+		console.log("Allowed to continue.");
+		document.body.appendChild(script);
+	  } else {
+		console.log("Not allowed to continue.");
+	  };
     </script>
   </body>
 </html>
