@@ -12,7 +12,7 @@ Qualtrics.SurveyEngine.addOnload(function()
 	window.dataFun = function (tag, str) {
 		str = str.replace(/(?:\r\n|\r|\n)/g, ' <br> ');
 		console.log("DataFun Says: " + str);
-		switch tag {
+		switch (tag) {
 			case 'session':
 				Qualtrics.SurveyEngine.setEmbeddedData( 'SessionData', str );
 				break;
