@@ -18,21 +18,67 @@
 			<li><a href="instructions/VE2_DOTS.mp4">Scatter 2D and 3D</a></li>
 			<li><a href="instructions/VE2_RINGS.mp4">Ellipse 2D and 3D</a></li>
 		</ul>
-		<h1>QUTE 2D Training demo:</h1>
-		<ul>
-			<li><a href="qute_2d_demo/index.html?block=1&cond=gain&type=ellipse">2-source, gain, ellipse</a>
-			<li><a href="qute_2d_demo/index.html?block=4&cond=gain&type=ellipse">3-source, gain, ellipse</a>
-			<li><a href="qute_2d_demo/index.html?block=7&cond=gain&type=ellipse">mixed-source, gain, ellipse</a>
-			<li><a href="qute_2d_demo/index.html?block=1&cond=gain&type=scatter">2-source, gain, scatter</a>
-			<li><a href="qute_2d_demo/index.html?block=4&cond=gain&type=scatter">3-source, gain, scatter</a>
-			<li><a href="qute_2d_demo/index.html?block=7&cond=gain&type=scatter">mixed-source, gain, scatter</a>			
-			<li><a href="qute_2d_demo/index.html?block=1&cond=loss&type=ellipse">2-source, loss, ellipse</a>
-			<li><a href="qute_2d_demo/index.html?block=4&cond=loss&type=ellipse">3-source, loss, ellipse</a>
-			<li><a href="qute_2d_demo/index.html?block=7&cond=loss&type=ellipse">mixed-source, loss, ellipse</a>
-			<li><a href="qute_2d_demo/index.html?block=1&cond=loss&type=scatter">2-source, loss, scatter</a>
-			<li><a href="qute_2d_demo/index.html?block=4&cond=loss&type=scatter">3-source, loss, scatter</a>
-			<li><a href="qute_2d_demo/index.html?block=7&cond=loss&type=scatter">mixed-source, loss, scatter</a>
-		</ul>
+		<H1>QUTE 2D Training Demo</H1>
+		<form id="myform" action="./qute_2d_demo/index.html" style="background-color: lightblue; padding: 20px; display: inline-block">
+			<h2>Select training parameters</h2><br />
+			<b>Feedback frame:</b><br />
+			<input type="radio" name="cond" id="frame_gain" value="gain" checked>
+			<label for="frame_gain">Gain</label><br />
+			<input type="radio" name="cond" id="frame_loss" value="loss">
+			<label for="frame_loss">Loss</label><br />
+
+			<br /><b>Stimulus type:</b><br />
+			<input type="radio" name="type" id="cond_ellipse" value="ellipse" checked>
+			<label for="cond_ellipse">Ellipse</label><br />
+			<input type="radio" name="type" id="cond_scatter" value="scatter">
+			<label for="cond_scatter">Scatter</label><br />
+			<br /><b>Starting block:</b><br />
+			<script lang="JavaScript">
+			const fm = document.getElementById("myform");
+			for (idx = 1; idx <= 8; idx++) {
+				let li = document.createElement("input");
+				li.type="radio";
+				li.name="block";
+				li.id = "block_" + idx;
+				li.value=idx.toString();
+				if (idx===1) {
+					li.checked = true;
+				}
+				fm.append(li);
+				
+				let lbl = document.createElement("label");
+				lbl.setAttribute("for", "block_" + idx);
+				console.log(lbl);
+				let lbl_txt = idx.toString();
+				switch (idx){
+					case 1:
+					case 2:
+						lbl_txt += " (2-source)";
+						break;
+					case 3:
+						lbl_txt += " (2-source)<br />";
+						break;
+					case 4:
+					case 5:
+						lbl_txt += " (3-source)";
+						break;
+					case 6:
+						lbl_txt += " (3-source)<br />";
+						break;
+					case 7:
+					case 8:
+						lbl_txt += " (mix)";
+						break;
+				}
+				lbl.innerHTML=lbl_txt;
+				fm.append(lbl);
+				fm.append(document.createElement("br"));
+			}
+			</script>
+			<br />
+			<br />
+			<input type="submit">
+		</form>
 		<h1>Running Virtual Environment-Based Experiments Online</h1>
 		<p>Here is <a href="AD1164350.pdf">a technical note describing one approach to running virtual environment-based experiments online</a>.</p>
 		<p><b>Abstract</b> Conducting behavioral experiments online enables researchers to obtain large sample sizes quickly. Existing tools for online experiments are primarily suited for text and 2-D images, while bringing 3-D virtual environment experiences to the web for research remains a challenge. This technical note describes a process to present complex 3-D virtual environments to online participants and collect the resulting data. The process starts with a virtual environment built in Unity and describes the steps to display the virtual environment in the context of a Qualtrics questionnaire, including how to save data into a Qualtrics user record. Code and examples are provided with the hope that other researchers can conveniently follow this process to conduct online behavioral experiments using 3-D virtual environments.</p>
