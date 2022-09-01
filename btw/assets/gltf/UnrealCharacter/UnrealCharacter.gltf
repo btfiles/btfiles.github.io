@@ -1,0 +1,359 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 88,
+      "type": "VEC3",
+      "max": [
+        0.50000011920928955,
+        1.0,
+        0.50000005960464478
+      ],
+      "min": [
+        -0.5,
+        -1.0,
+        -0.5000002384185791
+      ]
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 88,
+      "type": "VEC3",
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ]
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 88,
+      "type": "VEC4",
+      "max": [
+        1.0,
+        0.0,
+        1.0,
+        -1.0
+      ],
+      "min": [
+        -1.0,
+        0.0,
+        -1.0,
+        -1.0
+      ]
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 88,
+      "type": "VEC2",
+      "max": [
+        0.99974912405014038,
+        0.999430775642395
+      ],
+      "min": [
+        0.00069368560798466206,
+        0.00045373811735771596
+      ]
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 88,
+      "type": "VEC2",
+      "max": [
+        0.99716836214065552,
+        0.99788063764572144
+      ],
+      "min": [
+        0.0043606190010905266,
+        0.002600180683657527
+      ]
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5125,
+      "count": 240,
+      "type": "SCALAR",
+      "max": [
+        87.0
+      ],
+      "min": [
+        0.0
+      ]
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5126,
+      "count": 515,
+      "type": "VEC3",
+      "max": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "min": [
+        -0.5,
+        -0.5,
+        -0.5
+      ]
+    },
+    {
+      "bufferView": 7,
+      "componentType": 5126,
+      "count": 515,
+      "type": "VEC3",
+      "max": [
+        0.99997496604919434,
+        1.0,
+        0.9999769926071167
+      ],
+      "min": [
+        -0.99997496604919434,
+        -1.0,
+        -0.99997353553771973
+      ]
+    },
+    {
+      "bufferView": 8,
+      "componentType": 5126,
+      "count": 515,
+      "type": "VEC4",
+      "max": [
+        1.0,
+        0.056131001561880112,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -0.065983392298221588,
+        -1.0,
+        -1.0
+      ]
+    },
+    {
+      "bufferView": 9,
+      "componentType": 5126,
+      "count": 515,
+      "type": "VEC2",
+      "max": [
+        0.99833369255065918,
+        0.97589123249053955
+      ],
+      "min": [
+        -0.00092136859893798828,
+        0.017628978937864304
+      ]
+    },
+    {
+      "bufferView": 10,
+      "componentType": 5126,
+      "count": 515,
+      "type": "VEC2",
+      "max": [
+        1.0000003576278687,
+        0.65385353565216064
+      ],
+      "min": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "bufferView": 11,
+      "componentType": 5125,
+      "count": 2304,
+      "type": "SCALAR",
+      "max": [
+        514.0
+      ],
+      "min": [
+        0.0
+      ]
+    }
+  ],
+  "asset": {
+    "generator": "Plattar UnityGLTF (2019.2.18f1)",
+    "version": "2.0"
+  },
+  "buffers": [
+    {
+      "uri": "UnrealCharacter.bin",
+      "byteLength": 43944
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 1056
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 1056,
+      "byteLength": 1056
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 2112,
+      "byteLength": 1408
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 3520,
+      "byteLength": 704
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 4224,
+      "byteLength": 704
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 4928,
+      "byteLength": 960
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 5888,
+      "byteLength": 6180
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 12068,
+      "byteLength": 6180
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 18248,
+      "byteLength": 8240
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 26488,
+      "byteLength": 4120
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 30608,
+      "byteLength": 4120
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 34728,
+      "byteLength": 9216
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.0,
+          0.315872669,
+          1.0,
+          0.490196079
+        ],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.5
+      },
+      "alphaMode": "BLEND",
+      "name": "blue"
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3,
+            "TEXCOORD_1": 4
+          },
+          "indices": 5,
+          "material": 0
+        }
+      ],
+      "name": "UnrealCharacter"
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 6,
+            "NORMAL": 7,
+            "TANGENT": 8,
+            "TEXCOORD_0": 9,
+            "TEXCOORD_1": 10
+          },
+          "indices": 11,
+          "material": 0
+        }
+      ],
+      "name": "Sphere"
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "mesh": 0,
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "scale": [
+        0.3,
+        0.7,
+        0.3
+      ],
+      "translation": [
+        0.0,
+        0.862,
+        2.909
+      ],
+      "name": "UnrealCharacter"
+    },
+    {
+      "mesh": 1,
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "scale": [
+        1.0,
+        0.428571433,
+        1.0
+      ],
+      "translation": [
+        0.0,
+        1.20571423,
+        0.0
+      ],
+      "name": "Sphere"
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ],
+      "name": "UnrealCharacter"
+    }
+  ]
+}

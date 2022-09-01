@@ -1,0 +1,383 @@
+{
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 4,
+      "type": "VEC3",
+      "max": [
+        2.0,
+        0.0,
+        2.0
+      ],
+      "min": [
+        -2.0,
+        0.0,
+        -2.0
+      ]
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 4,
+      "type": "VEC3",
+      "max": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "min": [
+        0.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 4,
+      "type": "VEC4",
+      "max": [
+        -1.0,
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "min": [
+        -1.0,
+        0.0,
+        0.0,
+        -1.0
+      ]
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 4,
+      "type": "VEC2",
+      "max": [
+        0.55758732557296753,
+        0.057587377727031708
+      ],
+      "min": [
+        0.5117485523223877,
+        0.011748645454645157
+      ]
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 4,
+      "type": "VEC2",
+      "max": [
+        0.98449575901031494,
+        0.98449623584747314
+      ],
+      "min": [
+        0.015503871254622936,
+        0.015503878705203533
+      ]
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5125,
+      "count": 6,
+      "type": "SCALAR",
+      "max": [
+        3.0
+      ],
+      "min": [
+        0.0
+      ]
+    },
+    {
+      "bufferView": 6,
+      "componentType": 5126,
+      "count": 2679,
+      "type": "VEC3",
+      "max": [
+        2.0,
+        4.0,
+        0.19397099316120148
+      ],
+      "min": [
+        -2.0,
+        -1.2640731483770651E-07,
+        -8.3073973655700684E-07
+      ]
+    },
+    {
+      "bufferView": 7,
+      "componentType": 5126,
+      "count": 2679,
+      "type": "VEC3",
+      "max": [
+        1.0,
+        0.99898189306259155,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ]
+    },
+    {
+      "bufferView": 8,
+      "componentType": 5126,
+      "count": 2679,
+      "type": "VEC4",
+      "max": [
+        1.0,
+        0.23111514747142792,
+        0.99950540065765381,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -0.20973874628543854,
+        -0.99935835599899292,
+        -1.0
+      ]
+    },
+    {
+      "bufferView": 9,
+      "componentType": 5126,
+      "count": 2679,
+      "type": "VEC2",
+      "max": [
+        0.93792927265167236,
+        0.286094069480896
+      ],
+      "min": [
+        0.8568572998046875,
+        0.22919914126396179
+      ]
+    },
+    {
+      "bufferView": 10,
+      "componentType": 5126,
+      "count": 2679,
+      "type": "VEC2",
+      "max": [
+        0.92735958099365234,
+        0.98449611663818359
+      ],
+      "min": [
+        0.014604086987674236,
+        0.015503877773880959
+      ]
+    },
+    {
+      "bufferView": 11,
+      "componentType": 5125,
+      "count": 3885,
+      "type": "SCALAR",
+      "max": [
+        2678.0
+      ],
+      "min": [
+        0.0
+      ]
+    }
+  ],
+  "asset": {
+    "generator": "Plattar UnityGLTF (2019.2.18f1)",
+    "version": "2.0"
+  },
+  "buffers": [
+    {
+      "uri": "SimulatedRealWorld.bin",
+      "byteLength": 165812
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 48
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 48,
+      "byteLength": 48
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 96,
+      "byteLength": 64
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 160,
+      "byteLength": 32
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 192,
+      "byteLength": 32
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 224,
+      "byteLength": 24
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 248,
+      "byteLength": 32148
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 32396,
+      "byteLength": 32148
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 64544,
+      "byteLength": 42864
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 107408,
+      "byteLength": 21432
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 128840,
+      "byteLength": 21432
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 150272,
+      "byteLength": 15540
+    }
+  ],
+  "images": [
+    {
+      "uri": "LowPolyDungeonsLite_Texture_01.jpg",
+      "name": "LowPolyDungeonsLite_Texture_01"
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.75
+      },
+      "name": "LowPolyDungeonsLite_MAIN"
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3,
+            "TEXCOORD_1": 4
+          },
+          "indices": 5,
+          "material": 0
+        }
+      ],
+      "name": "ground"
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 6,
+            "NORMAL": 7,
+            "TANGENT": 8,
+            "TEXCOORD_0": 9,
+            "TEXCOORD_1": 10
+          },
+          "indices": 11,
+          "material": 0
+        }
+      ],
+      "name": "wall"
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1,
+        2
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "translation": [
+        0.0,
+        0.0,
+        -1.93
+      ],
+      "name": "SimulatedRealWorld"
+    },
+    {
+      "mesh": 0,
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "scale": [
+        10.0,
+        1.0,
+        10.0
+      ],
+      "name": "ground"
+    },
+    {
+      "mesh": 1,
+      "rotation": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.4,
+        1.0,
+        1.0
+      ],
+      "translation": [
+        1.422,
+        0.0,
+        6.22
+      ],
+      "name": "wall"
+    }
+  ],
+  "samplers": [
+    {
+      "minFilter": 9729
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ],
+      "name": "SimulatedRealWorld"
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0,
+      "name": "LowPolyDungeonsLite_Texture_01"
+    }
+  ]
+}
