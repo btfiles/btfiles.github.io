@@ -7,19 +7,28 @@
             text-align: center;
         }
         #image-container img {
-            max-width: 400px;
-            max-height: 400px;
+            max-width: 600px;
+            max-height: 600px;
         }
         #button-container {
             text-align: center;
             margin-top: 20px;
         }
+		#selector-container {
+			text-align: center;
+			margin-top: 20px;
+		}
         .btn {
             padding: 10px 20px;
             margin: 0 5px;
             font-size: 16px;
             cursor: pointer;
         }
+		.sel {
+			padding: 10px 20px;
+			margin: 0 5px;
+			font-size: 16px;
+		}
     </style>
 </head>
 <body>
@@ -27,46 +36,42 @@
         <img id="current-image" src="" alt="Image">
     </div>
     <div id="button-container">
-        <button class="btn" id="prev-button">Previous</button>
-        <button class="btn" id="next-button">Next</button>
-        <button class="btn" id="up-button">Up</button>
-        <button class="btn" id="down-button">Down</button>
+        <button class="btn" id="prev-button">Azimuth--</button>
+        <button class="btn" id="next-button">Azimuth++</button>
+        <button class="btn" id="up-button">Graze++</button>
+        <button class="btn" id="down-button">Graze--</button>
     </div>
+	<div id="selector-container">
+		<select class="sel" id="dome-selector">
+		</select>
+	</div>
 
     <script>
 		//img/turretsnozeroface_alone_/turretsnozeroface_alone_18-015.png
 		//img/turretsnozeroface_alone_/turretsnozeroface_alone_30-360.png
 		// construct the image lists
-		var set_name = 'turretsnozeroface_alone_';
 		
-		var img_prefix = 'img/' + set_name + '/' + set_name;
-		var grazeList = [18, 24, 30];
+		setList = ['turretsnozeroface_alone_', 'Helicopter_In_trees_'];
+		
+	
 		var imageLists = [];
-		
-		for (var i = 0; i < grazeList.length; i++) {
-			var list = [];
-			var prefix = img_prefix + grazeList[i];
-			var incr = 15;
-			var count = 360/incr;
-			
-			for (var j = 1; j <= count; j++) {
-				var imageNum = j * incr;
-				var imageName = prefix + '-' + String(imageNum).padStart(3, '0') + '.png';
-				console.log(imageName);
-				list.push(imageName);
-			}
-			
-			imageLists.push(list);
-		}
-
         var currentListIndex = 0; 
         var currentIndex = 0; 
+		
+
 
         var imageElement = document.getElementById('current-image');
         var prevButton = document.getElementById('prev-button');
         var nextButton = document.getElementById('next-button');
         var upButton = document.getElementById('up-button');
         var downButton = document.getElementById('down-button');
+		var domeSelector = document.getElementById('dome-selector');
+		
+		// add the setList to the selector.
+		for (var i = 0; i < setList.length; i++) {
+			domeSelector.add(new Option('Set ' + (i+1), setList[i]));
+		}
+		domeSelector.selectedIndex = "0";
 
         // Preload all images in all lists
         function preloadAllImages() {
@@ -106,6 +111,35 @@
 
             showCurrentImage();
         }
+		
+		// setup the list of dome images
+		function initDome(setName) {
+			var set_name = setName; //'turretsnozeroface_alone_';
+		
+			var img_prefix = 'img/' + set_name + '/' + set_name;
+			var grazeList = [18, 24, 30];
+			imageLists = [];
+			
+			for (var i = 0; i < grazeList.length; i++) {
+				var list = [];
+				var prefix = img_prefix + grazeList[i];
+				var incr = 15;
+				var count = 360/incr;
+				
+				for (var j = 1; j <= count; j++) {
+					var imageNum = j * incr;
+					var imageName = prefix + '-' + String(imageNum).padStart(3, '0') + '.png';
+					console.log(imageName);
+					list.push(imageName);
+				}
+				
+				imageLists.push(list);
+			}
+			
+			preloadAllImages();
+			showCurrentImage();
+			
+		}
 
         // Event listeners for button clicks
         prevButton.addEventListener('click', function() {
@@ -123,12 +157,14 @@
         downButton.addEventListener('click', function() {
             updateListAndImage('down');
         });
+		
+		domeSelector.addEventListener('change', function() {
+			console.log('domeSelector changed: ' + domeSelector.value);
+			initDome(domeSelector.value);
+		});
 
-        // Preload all images in all lists
-        preloadAllImages();
-
-        // Show the initial image
-        showCurrentImage();
+		// get the dome ready and display it
+		initDome(domeSelector.value);
     </script>
 </body>
 </html>
