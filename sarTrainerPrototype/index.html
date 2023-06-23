@@ -10,34 +10,36 @@
 <div id="image-container">
 	<img id="current-image" alt="Image">
 </div>
-<div id="widget-container">
-	<div id="orbit-container">
-	  <div id="central-point">
-		<img src='img/compass.png' alt='An iconic compass rose, with North up.' />
-	  </div>
-	  <div id="orbiting-icon">
-		<img src='img/sat.png' alt='An iconic satellite.' id="orbiting-icon-img"/>
-	  </div>
+<div id="UI-container">
+	<div id="widget-container">
+		<div id="orbit-container">
+		  <div id="central-point">
+			<img src='img/compass.png' alt='An iconic compass rose, with North up.' />
+		  </div>
+		  <div id="orbiting-icon">
+			<img src='img/sat.png' alt='An iconic satellite.' id="orbiting-icon-img"/>
+		  </div>
+		</div>
+		<div id="graze-container">
+		  <canvas id="angleCanvas"></canvas>
+		  <div id="graze-icon">
+			<img src='img/sat.png' alt='An iconic satellite.' id="graze-icon-img"/>
+		  </div>
+		</div>
 	</div>
-	<div id="graze-container">
-	  <canvas id="angleCanvas"></canvas>
-	  <div id="graze-icon">
-		<img src='img/sat.png' alt='An iconic satellite.' id="graze-icon-img"/>
-	  </div>
-	</div>
-</div>
 
-<div id="button-container">
-	<button class="btn" id="prev-button">Azimuth--</button>
-	<button class="btn" id="next-button">Azimuth++</button>
-	<button class="btn" id="up-button">Graze++</button>
-	<button class="btn" id="down-button">Graze--</button>
-</div>
-<div id="selector-container">
-	<select class="sel" id="dome-selector">
-	</select>
-	<select class="sel" id="type-selector">
-	</select>
+	<div id="button-container">
+		<button class="btn" id="prev-button">Azimuth--</button>
+		<button class="btn" id="next-button">Azimuth++</button>
+		<button class="btn" id="up-button">Graze++</button>
+		<button class="btn" id="down-button">Graze--</button>
+	</div>
+	<div id="selector-container">
+		<select class="sel" id="dome-selector">
+		</select>
+		<select class="sel" id="type-selector">
+		</select>
+	</div>
 </div>
 <script src='script/shared.js'></script>
 <script src='script/orbit.js'></script>
