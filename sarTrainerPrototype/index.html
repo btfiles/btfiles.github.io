@@ -1,170 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Image Viewer</title>
-    <style>
-        #image-container {
-            text-align: center;
-        }
-        #image-container img {
-            max-width: 600px;
-            max-height: 600px;
-        }
-        #button-container {
-            text-align: center;
-            margin-top: 20px;
-        }
-		#selector-container {
-			text-align: center;
-			margin-top: 20px;
-		}
-        .btn {
-            padding: 10px 20px;
-            margin: 0 5px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-		.sel {
-			padding: 10px 20px;
-			margin: 0 5px;
-			font-size: 16px;
-		}
-    </style>
+    <title>SAR Trainer Prototype</title>
+	<link rel='stylesheet' href='css/orbit.css'>
+	<link rel='stylesheet' href='css/graze.css'>
+	<link rel='stylesheet' href='css/main.css'>
 </head>
 <body>
-    <div id="image-container">
-        <img id="current-image" src="" alt="Image">
-    </div>
-    <div id="button-container">
-        <button class="btn" id="prev-button">Azimuth--</button>
-        <button class="btn" id="next-button">Azimuth++</button>
-        <button class="btn" id="up-button">Graze++</button>
-        <button class="btn" id="down-button">Graze--</button>
-    </div>
-	<div id="selector-container">
-		<select class="sel" id="dome-selector">
-		</select>
+<div id="image-container">
+	<img id="current-image" alt="Image">
+</div>
+<div id="widget-container">
+	<div id="orbit-container">
+	  <div id="central-point">
+		<img src='img/compass.png' alt='An iconic compass rose, with North up.' />
+	  </div>
+	  <div id="orbiting-icon">
+		<img src='img/sat.png' alt='An iconic satellite.' id="orbiting-icon-img"/>
+	  </div>
 	</div>
+	<div id="graze-container">
+	  <canvas id="angleCanvas"></canvas>
+	  <div id="graze-icon">
+		<img src='img/sat.png' alt='An iconic satellite.' id="graze-icon-img"/>
+	  </div>
+	</div>
+</div>
 
-    <script>
-		//img/turretsnozeroface_alone_/turretsnozeroface_alone_18-015.png
-		//img/turretsnozeroface_alone_/turretsnozeroface_alone_30-360.png
-		// construct the image lists
-		
-		setList = ['turretsnozeroface_alone_', 'Helicopter_In_Trees_', 'searchresheli_Variant_13_'];
-		
-	
-		var imageLists = [];
-        var currentListIndex = 0; 
-        var currentIndex = 0; 
-		
-
-
-        var imageElement = document.getElementById('current-image');
-        var prevButton = document.getElementById('prev-button');
-        var nextButton = document.getElementById('next-button');
-        var upButton = document.getElementById('up-button');
-        var downButton = document.getElementById('down-button');
-		var domeSelector = document.getElementById('dome-selector');
-		
-		// add the setList to the selector.
-		for (var i = 0; i < setList.length; i++) {
-			domeSelector.add(new Option('Set ' + (i+1), setList[i]));
-		}
-		domeSelector.selectedIndex = "0";
-
-        // Preload all images in all lists
-        function preloadAllImages() {
-            for (var i = 0; i < imageLists.length; i++) {
-                preloadImages(imageLists[i]);
-            }
-        }
-
-        // Preload images -- does this actually work?
-        function preloadImages(list) {
-            for (var i = 0; i < list.length; i++) {
-                var img = new Image();
-                img.src = list[i];
-            }
-        }
-
-        // Display the current image
-        function showCurrentImage() {
-            imageElement.src = imageLists[currentListIndex][currentIndex];
-        }
-
-        // Update the current list and image based on direction
-        function updateListAndImage(direction) {
-            if (direction === 'next') {
-                currentIndex = (currentIndex + 1) % imageLists[currentListIndex].length; // Wrap around
-            } else if (direction === 'prev') {
-                currentIndex = (currentIndex - 1 + imageLists[currentListIndex].length) % imageLists[currentListIndex].length; // Wrap around
-            } else if (direction === 'down') {
-                if (currentListIndex > 0) {
-                    currentListIndex--;
-                }
-            } else if (direction === 'up') {
-                if (currentListIndex < imageLists.length - 1) {
-                    currentListIndex++;
-                }
-            }
-
-            showCurrentImage();
-        }
-		
-		// setup the list of dome images
-		function initDome(setName) {
-			var set_name = setName; //'turretsnozeroface_alone_';
-		
-			var img_prefix = 'img/' + set_name + '/' + set_name;
-			var grazeList = [18, 24, 30];
-			imageLists = [];
-			
-			for (var i = 0; i < grazeList.length; i++) {
-				var list = [];
-				var prefix = img_prefix + grazeList[i];
-				var incr = 15;
-				var count = 360/incr;
-				
-				for (var j = 1; j <= count; j++) {
-					var imageNum = j * incr;
-					var imageName = prefix + '-' + String(imageNum).padStart(3, '0') + '.png';
-					console.log(imageName);
-					list.push(imageName);
-				}
-				
-				imageLists.push(list);
-			}
-			
-			preloadAllImages();
-			showCurrentImage();
-			
-		}
-
-        // Event listeners for button clicks
-        prevButton.addEventListener('click', function() {
-            updateListAndImage('prev');
-        });
-
-        nextButton.addEventListener('click', function() {
-            updateListAndImage('next');
-        });
-
-        upButton.addEventListener('click', function() {
-            updateListAndImage('up');
-        });
-
-        downButton.addEventListener('click', function() {
-            updateListAndImage('down');
-        });
-		
-		domeSelector.addEventListener('change', function() {
-			console.log('domeSelector changed: ' + domeSelector.value);
-			initDome(domeSelector.value);
-		});
-
-		// get the dome ready and display it
-		initDome(domeSelector.value);
-    </script>
+<div id="button-container">
+	<button class="btn" id="prev-button">Azimuth--</button>
+	<button class="btn" id="next-button">Azimuth++</button>
+	<button class="btn" id="up-button">Graze++</button>
+	<button class="btn" id="down-button">Graze--</button>
+</div>
+<div id="selector-container">
+	<select class="sel" id="dome-selector">
+	</select>
+	<select class="sel" id="type-selector">
+	</select>
+</div>
+<script src='script/shared.js'></script>
+<script src='script/orbit.js'></script>
+<script src='script/graze.js'></script>
+<script src='script/main.js'></script>
 </body>
 </html>
